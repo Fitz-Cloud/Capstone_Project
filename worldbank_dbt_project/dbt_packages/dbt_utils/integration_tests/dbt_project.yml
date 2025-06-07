@@ -4,7 +4,7 @@ version: '1.0'
 
 profile: 'integration_tests'
 
-# require-dbt-version: inherit this from dbt-utils
+
 
 config-version: 2
 
@@ -14,8 +14,8 @@ test-paths: ["tests"]
 seed-paths: ["data"]
 macro-paths: ["macros"]
 
-target-path: "target"  # directory which will store compiled SQL files
-clean-targets:         # directories to be removed by `dbt clean`
+target-path: "target"  
+clean-targets:         
     - "target"
     - "dbt_modules"
     - "dbt_packages"
@@ -34,7 +34,7 @@ seeds:
         +schema: events
       
       data_get_column_values_dropped:
-        # this.incorporate() to hardcode the node's type as otherwise dbt doesn't know it yet
+        
         +post-hook: "{% do adapter.drop_relation(this.incorporate(type='table')) %}"
 
       data_get_single_value:

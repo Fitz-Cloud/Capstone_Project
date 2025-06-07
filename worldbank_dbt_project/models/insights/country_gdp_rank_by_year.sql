@@ -6,7 +6,7 @@ with ranked_gdp as (
     rank() over (partition by f.year order by f.gdp_usd desc) as rank
   from {{ ref('fct_world_bank_metrics') }} f
   join {{ ref('dim_country') }} c on f.country_key = c.country_key
-  where f.year = 2023  -- 🔁 Replace with dynamic input
+  where f.year = 2023  
 )
 
 select *
