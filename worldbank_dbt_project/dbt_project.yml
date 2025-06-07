@@ -1,0 +1,47 @@
+name: worldbank_dbt_project
+version: '1.0'
+profile: worldbank_dbt_project_snowflake
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+target-path: "target"
+clean-targets: ["target"]
+
+# Optional: enable source freshness testing
+sources:
+  +freshness:
+    warn_after: { count: 1, period: day }
+    error_after: { count: 2, period: day }
+
+models:
+  worldbank_dbt_project:
+
+    staging:
+      materialized: view
+      schema: staging
+
+    marts:
+      materialized: table
+      schema: mart
+
+    insights:
+      materialized: table
+      schema: insights
+
+
+
+
+
+
+##name: worldbank_dbt_project  
+##version: '1.0'
+##profile: worldbank_dbt_project_snowflake
+
+#model-paths: ["models"]
+#seed-paths: ["seeds"]
+#snapshot-paths: ["snapshots"]
+
+#target-path: "target"
+#clean-targets:
+  #- "target"
+  #- "dbt_modules"

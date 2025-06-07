@@ -1,0 +1,13 @@
+#version: 2
+
+#seeds:
+  #- name: world_bank_gdp
+   # columns:
+    #  - name: "GDP (Current US$)"
+     #   description: "Gross Domestic Product in USD"
+      #  tests:
+       #   - not_null:
+        #      config:
+         #       where: '"GDP (Current US$)" is not null'
+          #- dbt_utils.expression_is_true:
+           #   expression: '"GDP (Current US$)" > 0'

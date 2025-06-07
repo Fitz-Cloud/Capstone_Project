@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: gdp_growth_last_10_years
+    description: "Top countries by GDP growth in the last 10 years"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [country_name]
+
+  - name: top_10_global_gdp_each_year
+    description: "Top 10 Countries Each year"
+
+  - name: country_gdp_rank_by_year
+    description: "GDP Rank by Year"
+
+  - name: gdp_trend_by_country
+    description: "Trend by Country"
+
+  - name: gdp_vs_population_inflation
+    description: "GDP vs Indicators"

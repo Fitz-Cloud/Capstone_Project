@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  airbyte-server:
+    volumes:
+      - C:/Users/fitzp/OneDrive/Desktop/Capstone_elt_Project/CAPSTONE_ELT_PROJECT/worldbank_dbt_project/seeds:/local
+  airbyte-worker:
+    volumes:
+      - C:/Users/fitzp/OneDrive/Desktop/Capstone_elt_Project/CAPSTONE_ELT_PROJECT/worldbank_dbt_project/seeds:/local

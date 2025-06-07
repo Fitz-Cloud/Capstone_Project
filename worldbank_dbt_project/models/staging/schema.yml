@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_world_bank_gdp
+    description: "Cleaned GDP staging model"
+    columns:
+      - name: gdp_usd
+        description: "GDP in current US dollars"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "{{ column_name }} > 0"

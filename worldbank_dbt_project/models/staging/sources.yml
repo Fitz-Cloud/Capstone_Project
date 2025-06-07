@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: public
+    database: WORLD_BANK_PROJECT
+    schema: PUBLIC
+    tables:
+      - name: WORLD_BANK_GDP
+        description: "Raw GDP data from Airbyte, ingested into Snowflake"
+        columns:
+          - name: GDP
+            description: "Gross Domestic Product in current US dollars"
+          - name: DATE
+            description: "Year of the record"
+          - name: COUNTRY
+            description: "Country name"
+          - name: INFLATION
+            description: "Inflation indicator code"
+          - name: POPULATION
+            description: "Population indicator code"
+          - name: COUNTRYISO3CODE
+            description: "ISO Alpha-3 country code"
