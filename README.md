@@ -1,4 +1,4 @@
-This project demonstrates a complete ELT (Extract, Load, Transform) pipeline built to ingest GDP data from the World Bank, store it in Snowflake, and transform it using dbt. It includes data ingestion with Airbyte (from local CSV), transformation with dbt, and deployment using Docker and AWS.
+This project showcases a cloud-native ELT (Extract, Load, Transform) pipeline for ingesting GDP data from the World Bank API. The data is loaded into Snowflake using Airbyte (via local CSV), transformed with dbt, and deployed using Docker and AWS (ECR & ECS). The pipeline supports scalable, reproducible analytics workflows and concludes with visual insights powered by Tableau.
 
 ## 🚀 Project Stack
 
