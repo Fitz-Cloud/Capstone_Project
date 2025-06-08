@@ -27,6 +27,35 @@ Local CSV File (world_bank_gdp.csv)
    dbt Staging → Core Dimensions + Facts → BI Models (Insight Queries)
       ↓
    Dashboard / Tableau / Reporting
+## ELT Pipeline Architecture
+![alt text](worldbank_dbt_project/elt_pipeline_architecture.png)
+
+## Data Ingestion through Airbyte Connection
+   ![alt text](worldbank_dbt_project/airbyte_ingestion.png)
+
+## Snowflake Staging Table image
+   ![alt text](worldbank_dbt_project/snowflake_dbs.png)
+
+## AWS ECR
+   ![alt text](worldbank_dbt_project/aws_ecr_repo.png)
+
+## Docker Image on AWS ECR
+   ![alt text](worldbank_dbt_project/docker_image.png)
+
+## Transformed and Deployed Dataset from AWS to Snowflake Production Table
+  ![alt text](worldbank_dbt_project/snowflake_aws.png)
+
+## Transformed Dim Tables   
+![alt text](worldbank_dbt_project/dim_tables.png)
+
+## World_Bank GDP Dashboard
+  ![alt text](worldbank_dbt_project/dashboard.png)
+
+## Selected World Bank GDP Dashboard
+  ![alt text](worldbank_dbt_project/dashboard1.png)
+
+## dbt lineage diagram
+  ![alt text](worldbank_dbt_project/lineage.png)
 
 ## 📅 Step-by-Step Guide
 
